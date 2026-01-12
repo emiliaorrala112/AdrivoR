@@ -1,0 +1,80 @@
+
+:root { --adrivo-pink: #e83e8c; }
+
+.btn-primary { 
+    background-color: var(--adrivo-pink) !important; 
+    border-color: var(--adrivo-pink) !important; 
+}
+.main-header { border-bottom: 3px solid var(--adrivo-pink) !important; }
+a { color: var(--adrivo-pink); }
+
+.selector-available, .selector-chosen { width: 48% !important; min-height: 300px !important; }
+.selector h2 { background: var(--adrivo-pink) !important; }
+.historylink { font-size: 0 !important; }
+.historylink::after { content: 'Historial'; font-size: 14px !important; visibility: visible; }
+/* --- EXPANSIÓN TOTAL DEL SELECTOR DE PERMISOS --- */
+
+/* 1. El contenedor principal: Forzamos a que use Flexbox y ocupe todo el ancho */
+.selector {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: stretch !important; /* Que tengan la misma altura */
+    float: none !important; /* Quitar comportamiento antiguo */
+}
+
+/* 2. Las columnas izquierda (disponibles) y derecha (elegidos) */
+.selector-available, 
+.selector-chosen {
+    flex: 1 !important; /* Esto hace que crezcan para llenar el espacio */
+    width: 45% !important; /* Ancho base grande */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* 3. La lista interna (donde están los textos) */
+.selector select {
+    width: 100% !important;
+    min-height: 400px !important; /* Más altos para ver más opciones */
+    
+    /* TRUCO PARA LEER TEXTO LARGO: */
+    overflow-x: auto !important; /* Barra de scroll horizontal si es necesario */
+    white-space: nowrap !important; /* Mantiene el texto en una línea para que puedas scrollear */
+}
+
+/* 4. Las opciones de texto */
+.selector option {
+    padding: 8px 10px !important;
+    border-bottom: 1px solid #ffeaf2;
+    font-size: 0.9rem !important;
+    width: fit-content !important; /* Permite que el ancho sea tan largo como el texto */
+    min-width: 100%;
+}
+
+/* 5. La columna del medio (flechas) */
+.selector-chooser {
+    flex: 0 0 60px !important; /* Ancho fijo pequeño para las flechas */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+/* 6. Ajuste de las flechas para que estén centradas */
+.selector-chooser li {
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.selector .selector-filter {
+    width: 100% !important;
+}
+.selector .selector-filter input {
+    width: 90% !important; /* Que ocupe casi todo el ancho */
+}
