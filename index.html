@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrivo R. | Tu estilo, tu universo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        /* ESTILOS PERSONALIZADOS (Copiando tus colores) */
+        :root {
+            --primary-pink: #ff3399;
+            --gradient-start: #ff66b2;
+            --gradient-end: #ffcc00;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5; /* Fondo rosita claro */
+        }
+
+        /* Navbar Superior */
+        .top-navbar {
+            background-color: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brand-logo {
+            font-family: 'Brush Script MT', cursive;
+            color: var(--primary-pink);
+            font-size: 2rem;
+            text-decoration: none;
+        }
+
+        /* Barra de Menú (Rosada) */
+        .menu-bar {
+            background: linear-gradient(to right, #ff3399, #cc33ff);
+            padding: 10px 0;
+        }
+
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .menu-bar a:hover {
+            color: #ffe6f2;
+        }
+
+        /* Banner Hero (Degradado Naranja/Amarillo) */
+        .hero-section {
+            background: linear-gradient(to bottom, #ff99cc, #ffdb4d);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.5rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-family: 'Brush Script MT', cursive;
+            color: #800040;
+            font-size: 3rem;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* Tarjetas de Producto */
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            background: white;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-custom {
+            background-color: var(--primary-pink);
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#" class="brand-logo">
+                <img src="static/img/logo_adrivo.jpg" alt="Logo" width="50" class="rounded-circle me-2">
+                Adrivo R.
+            </a>
+
+            <div class="flex-grow-1 mx-5">
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Buscar en el universo...">
+                    <button class="btn text-primary position-absolute end-0 pe-3" style="z-index: 5;">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <span>Hola, admin_adrivo</span>
+                <a href="#" class="btn btn-dark btn-sm rounded-pill px-3"><i class="bi bi-gear-fill"></i> Panel</a>
+                <a href="#" class="text-dark fs-5"><i class="bi bi-box-arrow-right"></i></a>
+                <a href="#" class="text-dark fs-5"><i class="bi bi-heart"></i></a>
+                <a href="#" class="text-dark fs-5"><i class="bi bi-bag"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-bar text-center">
+        <div class="container d-flex justify-content-center flex-wrap">
+            <a href="#">INICIO</a>
+            <a href="#">MAQUILLAJE <i class="bi bi-chevron-down table-sm"></i></a>
+            <a href="#">CUIDADO PERSONAL <i class="bi bi-chevron-down small"></i></a>
+            <a href="#">ACCESORIOS Y MODA <i class="bi bi-chevron-down small"></i></a>
+            <a href="#">REGALOS Y JUGUETES <i class="bi bi-chevron-down small"></i></a>
+            <a href="#">PAPELERÍA <i class="bi bi-chevron-down small"></i></a>
+            <a href="#" class="text-warning">OFERTAS</a>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Tu estilo, tu universo.</h1>
+            <p class="fs-4 mt-3">Lo mejor en belleza y tecnología a precios increíbles.</p>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <h2 class="section-title">Últimas Novedades</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-3 mb-4">
+                <div class="card p-3 h-100">
+                    <img src="static/img/Shampoo_Aloe_vera.jpeg" class="card-img-top rounded" alt="Lip Scrub" style="height: 200px; object-fit: contain; background:#f8f9fa;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Shampoo Aloe Vera</h5>
+                        <p class="fw-bold text-primary">$4.50</p>
+                        <button class="btn btn-custom btn-sm w-100">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card p-3 h-100">
+                    <img src="static/img/Primer_FIT_ME.jpeg" class="card-img-top rounded" alt="Karite" style="height: 200px; object-fit: contain; background:#f8f9fa;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Primer FIT ME</h5>
+                        <p class="fw-bold text-primary">$1.25</p>
+                        <button class="btn btn-custom btn-sm w-100">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card p-3 h-100">
+                    <img src="static/img/eyelash_adhesive.jpeg" class="card-img-top rounded" alt="Collar" style="height: 200px; object-fit: contain; background:#f8f9fa;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Goma de Pestañas</h5>
+                        <p class="fw-bold text-primary">$0.75</p>
+                        <button class="btn btn-custom btn-sm w-100">Añadir</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card p-3 h-100">
+                    <img src="static/img/hojas_estilo.jpeg" class="card-img-top rounded" alt="Shampoo" style="height: 200px; object-fit: contain; background:#f8f9fa;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hojas Estilo</h5>
+                        <p class="fw-bold text-primary">$0.75</p>
+                        <button class="btn btn-custom btn-sm w-100">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 text-muted border-top">
+        <p>&copy; 2026 Adrivo R. Variedades. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
